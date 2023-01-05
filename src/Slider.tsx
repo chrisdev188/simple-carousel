@@ -31,9 +31,9 @@ const ImageSlider: React.FC<Props> = ({ images }) => {
   }, [currentIndex]);
 
   return (
-    <div className=" h-screen max-w-7xl mx-auto grid place-items-center overflow-hidden">
+    <div className="relative h-screen max-w-7xl mx-auto grid place-items-center overflow-hidden">
       <div
-        className={`relative w-full h-[600px] flex items-center`}
+        className={`w-full h-[600px] flex items-center`}
         ref={sliderRef}
         style={{
           transform: `translateX(${transitionValue}%)`,
@@ -61,13 +61,13 @@ const ImageSlider: React.FC<Props> = ({ images }) => {
         )}
       </div>
       <button
-        className="absolute top-1/2 left-8 p-2 rounded-full bg-gray-800 text-white"
+        className="absolute top-1/2 left-8 p-2 rounded-sm bg-pink-600 text-white"
         onClick={handlePrevClick}
       >
         Prev
       </button>
       <button
-        className="absolute top-1/2 right-8 p-2 rounded-full bg-gray-800 text-white"
+        className="absolute top-1/2 right-8 p-2 rounded-sm bg-pink-600 text-white"
         onClick={handleNextClick}
       >
         Next
